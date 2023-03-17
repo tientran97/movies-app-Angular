@@ -1,0 +1,46 @@
+@import '../../../styles/color';
+
+:host ::ng-deep {
+    .p-tabview-nav {
+        justify-content: center;
+    }
+}
+
+.poster {
+    max-width: 100%;
+}
+
+.overview {
+    line-height: 1.6;
+}
+.stat {
+    display: flex;
+    margin-bottom: 25px;
+    .lable {
+        width: 150px;
+        font-weight: bold;
+    }
+    .value {
+        color: $yellow;
+    }
+}
+.actor {
+    padding: 10px;
+    img {
+        width: 100%;
+    }
+    span {
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+    }
+}
+.non-image {
+    padding: 10px;
+    width: 100%;
+    max-width: 185px;
+    height: 90%;
+}
+.similar-title {
+    margin-left: 20px;
+}

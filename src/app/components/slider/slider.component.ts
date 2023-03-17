@@ -1,6 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import {
+    trigger,
+    state,
+    style,
+    transition,
+    animate
+} from '@angular/animations';
 import { IMAGE_SIZE } from 'src/app/constant/images-size';
 @Component({
     selector: 'slider',
@@ -15,15 +21,18 @@ import { IMAGE_SIZE } from 'src/app/constant/images-size';
 })
 export class SliderComponent implements OnInit {
     @Input() items: Movie[] = [];
-
+    @Input() isBanner: boolean = false;
     readonly imageSize = IMAGE_SIZE;
     currentSlideIndex: number = 0;
 
     constructor() {}
 
     ngOnInit(): void {
-        setInterval(() => {
-            this.currentSlideIndex = ++this.currentSlideIndex % this.items.length;
-        }, 3000);
+        if (this.isBanner === false) {
+            setInterval(() => {
+                this.currentSlideIndex =
+                    ++this.currentSlideIndex % this.items.length;
+            }, 3000);
+        }
     }
 }
