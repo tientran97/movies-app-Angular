@@ -13,4 +13,12 @@ export interface Movie {
     video: boolean;
     vote_average: number;
     vote_count: number;
+    name: string;
+}
+
+export interface MovieDB {
+    page: number;
+    results: Movie[];
+    total_result: number;
+    total_pages: number;
 }
