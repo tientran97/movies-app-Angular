@@ -7,8 +7,8 @@ import {
     MovieImages,
     MovieCredits
 } from '../models/movie';
-import { TvShowDto } from '../models/tvShow';
 import { switchMap, of } from 'rxjs';
+import { GenresDto } from '../models/genres';
 @Injectable({
     providedIn: 'root'
 })
@@ -30,22 +30,11 @@ export class MoviesService {
             );
     }
 
-    getTvshows(param: string = 'popular', count: number = 12) {
-        return this.http
-            .get<TvShowDto>(
-                `${this.baseURL}/tv/${param}?api_key=${this.apiKey}`
-            )
-            .pipe(
-                switchMap((res) => {
-                    return of(res.results.slice(0, count));
-                })
-            );
-    }
-
-    searchMovies(page: number = 1) {
+    searchMovies(page: number = 1, searchValue?: string) {
+        const param = searchValue ? 'search/movie' : 'movie/popular';
         return this.http
             .get<MovieDto>(
-                `${this.baseURL}/movie/popular?page=${page}&api_key=${this.apiKey}`
+                `${this.baseURL}/${param}?page=${page}&query=${searchValue}&api_key=${this.apiKey}`
             )
             .pipe(
                 switchMap((res) => {
@@ -89,6 +78,28 @@ export class MoviesService {
             .pipe(
                 switchMap((res) => {
                     return of(res.results.slice(1, 20));
+                })
+            );
+    }
+    getMovieGenres() {
+        return this.http
+            .get<GenresDto>(
+                `${this.baseURL}//genre/movie/list?api_key=${this.apiKey}`
+            )
+            .pipe(
+                switchMap((res) => {
+                    return of(res.genres);
+                })
+            );
+    }
+    getMoviesWithGenre(genreId: string,page:number) {
+        return this.http
+            .get<MovieDto>(
+                `${this.baseURL}/discover/movie?with_genres=${genreId}&page=${page}&api_key=${this.apiKey}`
+            )
+            .pipe(
+                switchMap((res) => {
+                    return of(res.results);
                 })
             );
     }
