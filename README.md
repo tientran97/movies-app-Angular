@@ -23,8 +23,8 @@ This is a simple Angular application for managing and displaying a list of movie
 
 ## Screenshots
 ![Home Page](screenshots/homepage.jpeg)
-![Search Results](screenshots/search-results.jpeg)
-![Movie Details](screenshots/movie-details.jpeg)
+![Search Results](screenshots/search-result.jpeg)
+![Movie Details](screenshots/movie-detail.jpeg)
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
