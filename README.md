@@ -1,27 +1,40 @@
-# MoviesApp
+# Movies App - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+## Description
+This is a simple Angular application for managing and displaying a list of movies. Users can view a list of movies, search for specific movies, and get details about each movie.
 
-## Development server
+## Features
+- View a list of movies
+- Search for movies by title
+- View detailed information about each movie
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies Used
+- Angular: [Angular Documentation](https://angular.io/)
+- PrimeNG: [PrimeNG](https://primeng.org/)
 
-## Code scaffolding
+## Installation
+1. Clone the repository: `git clone https://github.com/tientran97/movies-app-Angular.git`
+2. Navigate to the project directory: `cd movies-app-Angular`
+3. Install dependencies: `npm install`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
+1. Start the development server: `ng serve`
+2. Open your browser and go to `http://localhost:4200/` to view the app.
 
-## Build
+## Screenshots
+![Home Page](screenshots/homepage.jpeg)
+![Search Results](screenshots/search-results.jpeg)
+![Movie Details](screenshots/movie-details.jpeg)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## License
+This project is licensed under the [MIT License](LICENSE).
 
-## Running unit tests
+## Acknowledgments
+- [Angular](https://angular.io/) for the powerful front-end framework.
+- [PrimeNG](https://primeng.org/) for the responsive design components.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contact
+If you have any questions or suggestions, feel free to contact the project owner:
+- Name: Tien Tran
+- Email: tien.minhtran615034@gmail.com
+Happy coding!
